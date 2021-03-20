@@ -40,7 +40,7 @@ include("../include/connection.php");
 						</div>
 
 						<div class="col-md-3">
-							<a href=""><i class="fa users-cog fa-3x my-4;" style="color: white;"></i></a>
+							<a href="admin.php"><i class="fa users-cog fa-3x my-4;" style="color: white;"></i></a>
 						</div>
 					</div>
 				</div>
