@@ -32,7 +32,8 @@ if (isset($_POST['login']))
 		$res=mysqli_query($connect,$query);
 		if (mysqli_num_rows($res) 
 		{
-			echo "<script>alert('Done');</script>";
+			echo "<script>alert('Done')</script>";
+	
 			$_SESSION['doctors']=$uname;
 		}
 		else
