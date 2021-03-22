@@ -28,11 +28,20 @@
 		<li class="nav-item"><a href="#" class="nav-link text-white">'.$user.'</a></li>
 		<li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>';
          }
+
+         else if (isset($_SESSION['doctor'])) 
+         {
+         	$user=$_SESSION['doctor'];
+         	 echo '
+		<li class="nav-item"><a href="#" class="nav-link text-white">'.$user.'</a></li>
+		<li class="nav-item"><a href="logout.php" class="nav-link text-white">logout</a></li>';
+         }
+
          else
          {
-         	echo '<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Admin</a></li>
-		<li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">Doctor</a></li>
-		<li class="nav-item"><a href="" class="nav-link text-white">Patient</a></li>';
+         	echo '<li class="nav-item"><a href="index.php" class="nav-link text-white">Admin</a></li>
+		<li class="nav-item"><a href="adminlogin.php" class="nav-link text-white">Doctor</a></li>
+		<li class="nav-item"><a href="doctorlogin.php" class="nav-link text-white">Patient</a></li>';
          }
 		?>
 	</ul>
