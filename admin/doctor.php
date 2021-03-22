@@ -1,9 +1,31 @@
 <?php
+session_start();
+?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Total Doctors</title>
+</head>
+<body>
+<?php
+include("../include/header.php");
 include("../include/connection.php");
-$query="SELECT *FROM doctors WHERE status='Pending'ORDER BY date_reg ASC";
-$res=mysqli_query($connect,$query);
-$output="";
+?>
+<div class="container-fluid">
+	<div class="col-md-12">
+		<div class="row">
+			<div class="col-md-2" style="margin-left: -30px;">
+				<?php 
+				include("sidenav.php");
+				 ?>
+			</div>
+			<div class="col-md-10">
+				<h5 class="text-center">Total Doctors</h5>
+				<?php 
+				$query= "SELECT *FROM doctors WHERE status='Approved' ORDER BY data_reg ASC";
+				$res=mysqli_query($connect,$query);
+				$output="";
 $output.="
 <table class='table table-bordered'>
 <tr>
@@ -15,6 +37,7 @@ $output.="
 <th>Gender</th>
 <th>Phone</th>
 <th>Country</th>
+<th>Salary</th>
 <th>Date Registered</th>
 </tr>
 
@@ -42,19 +65,13 @@ while ($row=mysqli_fetch_array($res))
 <td>".$row['gender']."</td>
 <td>".$row['phone']."</td>
 <td>".$row['country']."</td>
+<td>".$row['salary']."</td>
 <td>".$row['date_reg']."</td>
 <td>".$row['']."</td>
 <td>
-<div class='col-md-12'>
-<div class='row'>
-<div class='col-md-6'>
-<button id='.$row['id']'."'class='btn btn-success approve'>Approve</button>
-</div>
-<div class='col-md-6'>
-<button id='.$row['id']'."'class='btn btn-danger reject'>Reject</button>
-</div>
-</div>
-</div>
+<a href='edit.php?id=".$row['id']."'>
+<button class="btn btn-info">Edit</button>
+</a>
  </td>     
 	";
 }
@@ -64,5 +81,11 @@ $output .="
 ";
 
 echo $output;
+				?>
+			</div>
+		</div>
+	</div>
+</div>
 
-?>
+</body>
+</html>
