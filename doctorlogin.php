@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("include/connection.php");
 if (isset($_POST['login'])) 
 {
@@ -34,6 +34,7 @@ if (isset($_POST['login']))
 		{
 			echo '<script>alert("Done");</script>';
 			$_SESSION['doctors']=$uname;
+			header("Location:doctor/index.php");
 		}
 		else
 		{
