@@ -27,7 +27,7 @@ include("../include/header.php");
 											<h5 class="text-white my-4">My Profile</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-user-circle fa-3x my-4" style="color: white;"></i></a>
+											<a href="profile.php"><i class="fa fa-user-circle fa-3x my-4" style="color: white;"></i></a>
 										</div>
 									</div>
 								</div>
@@ -42,7 +42,7 @@ include("../include/header.php");
 							<h5 class="text-white my-4">Patient</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-procedure fa-3x my-4" style="color: white;"></i></a>
+											<a href="#"><i class="fa fa-procedures fa-3x my-4" style="color: white;"></i></a>
 										</div>
 									</div>
 								</div>
@@ -57,7 +57,7 @@ include("../include/header.php");
 							<h5 class="text-white my-4">Appoinment</h5>
 										</div>
 										<div class="col-md-4">
-											<a href="#"><i class="fa fa-procedure fa-3x my-4" style="color: white;"></i></a>
+											<a href="#"><i class="fa fa-calendar fa-3x my-4" style="color: white;"></i></a>
 										</div>
 									</div>
 								</div>
